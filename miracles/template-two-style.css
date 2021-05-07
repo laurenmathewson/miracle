@@ -1,0 +1,115 @@
+/* This is a basic CSS reset to remove some of the default styling provided by the browser. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cadbe3;
+    color: #000000;
+    font-family:Verdana;
+    font-size: 14px;
+    line-height: 19px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+header {
+    color: #ffffff;
+    font-size: 30px;
+    height: 590px;
+
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+}
+
+header nav {
+    font-size: 18px;
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    /* horizontal alignment */
+    justify-content: space-evenly;
+    /* vertical alignment */
+    align-items: center;
+}
+
+header a {
+    color: #4385a8;
+    text-decoration: none;
+    padding: 8px 14px;
+}
+
+/* The :hover pseudo-selector is used to set the styling for an element when it is hovered over. For more info on pseudo classes and selectors, go here: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes */
+header a:hover {
+    background-color: #FEFEFE;
+    color: #4385a8;
+}
+
+main {
+    max-width: 720px;
+    /* "auto" is used to tell the browser to render an element with equal padding on each side. In this case, we first set the top/bottom margins to be 72px, and then allow the left/right margins to be calculated, taking into account the maximum width of the element (defined with "max-width: 720px") */
+    margin: 72px auto;
+}
+
+footer {
+    background-color: #4385a8;
+    color: #FEFEFE;
+    padding: 24px;
+
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    /* This line prevents the images from being larger than their parent element (the <element> that contains the <img> tag.) */
+    max-width: 100%;
+}
+h2 {
+    color: #4385a8;
+}
+h3 {
+    color: #4385a8;
+    font-weight: lighter;
+}
+h5 {
+    color: #4385a8;
+    font-weight: lighter;
+
+}
+
+#branding {
+    background-color: #FEFEFE;
+    background-image: url(../miracles/images/image001.png);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    /* Here we are saying that every element with a class of "grid" should be displayed as a grid and should have some spacing between each grid "cell". */
+    display: grid;
+    grid-gap: 24px;
+}
+
+.one-column {
+    grid-template-columns: 1fr;
+}
+
+.two-column {
+    grid-template-columns: 1fr 1fr;
+}
+.one {
+    color: gray;
+}
